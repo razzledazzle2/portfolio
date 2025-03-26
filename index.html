@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raymond Xuan - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Loading Animation -->
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+    </div>
+
+    <header>
+      <div class="container">
+        <img src="assets/Xray.png" alt="Xray Logo" class="nav-logo" />
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1><span id="hero-typing"></span></h1>
+            <div class="hero-buttons">
+              <a href="#contact" class="primary-btn">Get in touch</a>
+              <a href="#projects" class="secondary-btn">View projects</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="/assets/profile_pic.jpg" alt="Raymond Xuan" />
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about">
+        <div class="container">
+          <h2 class="section-title">About Me</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <p>
+                Hi, I'm Raymond — a 3rd year Computer Science student at UNSW passionate about turning real world problems into practical solutions through code.
+              </p>
+              <p>
+                Outside of tech, you’ll find me playing the electric guitar or at the gym.
+              </p>
+            </div>            <div class="about-info">
+              <div class="education">
+                <h3>Education</h3>
+                <div class="education-item">
+                  <p class="title">Bachelor of Computer Science</p>
+                  <p class="subtitle">University of New South Wales 2023 – May 2026 (expected)</p>
+                </div>
+
+              </div>              </div>
+              <br>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="projects">
+        <div class="container">
+          <h2 class="section-title">Projects</h2>
+          <div class="projects-grid">
+            <div class="project-card" data-project="recipe-tracker">
+              <div class="project-image">
+                <img src="assets/recipe_logo.webp" alt="Recipe Tracker Logo" />
+              </div>
+              <div class="project-content">
+                <h3>Recipe Tracker</h3>
+                <p>
+                  A full-stack recipe management app that lets users create,
+                  schedule and organise recipes with an integrated calendar,
+                  shopping list and a meal planner.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">Express</span>
+                  <span class="tag">Node.js</span>
+                  <span class="tag">PostgreSQL</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    class="github-link"
+                    ><i class="fab fa-github"></i> Code</a
+                  >
+                  <a
+                    href="https://recipetracker.vercel.app/"
+                    target="_blank"
+                    class="demo-link"
+                    >Live Demo</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card" data-project="portfolio-site">
+              <div class="project-image">
+                <img
+                  src="assets/portfolio.png"
+                  alt="Portfolio Website Cover"
+                />
+              </div>
+              <div class="project-content">
+                <h3>Portfolio Website</h3>
+                <p>
+                  A modern, responsive portfolio website built
+                  using HTML, CSS, and JavaScript. Features animations, modals,
+                  and interactive project showcases.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2 class="section-title">Contact Me</h2>
+          <div class="contact-content">
+            <div class="contact-text">
+              <p>
+                I'm currently looking for internship and graduate opportunities
+                in software development. Feel free to reach out if you'd like to
+                connect!
+              </p>
+              <div class="contact-info">
+                <div class="contact-item">
+                  <i class="fas fa-envelope"></i>
+                  <a href="mailto:raymondxuan3@gmail.com"
+                    >raymondxuan3@gmail.com</a
+                  >
+                </div>
+
+                <div class="contact-item">
+                  <i class="fas fa-phone-alt"></i>
+                  <a href="tel:0451134510">0451134510</a>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Project Modal -->
+    <div class="project-modal">
+      <div class="modal-content">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <h2 class="modal-title">Project Title</h2>
+        <div class="modal-description"></div>
+        <div id="project-templates" style="display: none">
+          <div class="project-template" data-project-id="recipe-tracker">
+            <h3>Description:</h3>
+
+            <p>
+              A recipe management app created using the PERN stack that lets
+              users create, schedule and organise recipes with an integrated
+              calendar, shopping list and a meal planner.
+            </p>
+
+            <h3>Motivation:</h3>
+            <p>
+              After getting into cooking last year 👨‍🍳, I used a Google
+              spreadsheet to track all my recipes but ended up running into some
+              problems:
+            </p>
+            <br>
+            <ul>
+              <li>
+                I had way too many tabs in my Google Sheet which made it very
+                hard to navigate.
+              </li>
+              <li>
+                Youtube links would navigate me off the spreadsheet which meant
+                I could not look at both ingredients and watch the video at the
+                same time.
+              </li>
+              <li>
+                It was difficult to manually adjust the quantity of ingredients
+                when I wanted to change the serving size.
+              </li>
+              <li>
+                I also wanted to be able to generate a shopping list based on
+                the recipes I was planning to cook for the week.
+              </li>
+            </ul>
+            <br>
+
+            <p>
+              So over the summer break, I decided to put the skills that I
+              learned from my frontend and backend courses in uni to try make a
+              website that would address these problems.
+            </p>
+
+            <h3>What I Learned:</h3>
+
+            <p>
+              This was my first full stack project from scratch and I learnt a
+              lot - all the way from designing a robust database to designing a
+              user friendly frontend to JWT authentication!
+            </p>
+          </div>
+        </div>
+
+        <div class="slideshow">
+          <h3>Have a quick peek!</h3>
+
+          <div class="slideshow-images">
+            <!-- Slides will be added dynamically -->
+          </div>
+          <div class="slide-controls">
+            <button class="prev-btn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="next-btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <div class="slide-dots">
+            <!-- Dots will be added dynamically -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
