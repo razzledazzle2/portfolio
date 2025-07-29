@@ -927,3 +927,25 @@ footer {
   padding-left: 1.2rem;
   list-style-type: disc;
 }
+
+/* for demo vid link */
+.demo-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background-color: var(--primary-color, #3b82f6); /* fallback to blue */
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.demo-btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.demo-btn:active {
+  transform: translateY(1px);
+}

@@ -123,6 +123,26 @@ const projectData = {
       demo: "https://example.com",
     },
   },
+  flockr: {
+    title: "Flockr (Church Management Software)",
+    description: `
+    Flockr is a full-stack church management system designed to help churches organise their people, streamline operations, and enable effective communication.
+    This project supports managing groups, events, attendance, and communications through a single platform. It was deployed using Docker and AWS services.
+  `,
+    slides: [],
+    technologies: [
+      "React",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Docker",
+      "AWS EC2",
+      "AWS RDS",
+    ],
+    links: {
+      demo: "",
+    },
+  },
 };
 
 // Open modal when clicking on a project card
@@ -141,16 +161,22 @@ projectCards.forEach((card) => {
       const newDescription = document.querySelector(
         `.project-template[data-project-id="${projectId}"]`
       );
-      
+
       if (newDescription) {
         descriptionEl.innerHTML = newDescription.innerHTML;
       }
-      
+
       // Clear previous slides
       slideshowImages.innerHTML = "";
       slideDots.innerHTML = "";
       slides = project.slides;
       currentSlide = 0;
+
+      if (project.slides.length === 0) {
+        slideshow.style.display = "none";
+      } else {
+        slideshow.style.display = "block";
+      }
 
       // Create slides
       project.slides.forEach((slide, index) => {
