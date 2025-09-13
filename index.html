@@ -255,17 +255,45 @@
           <div class="project-template" data-project-id="flockr">
             <h3>Description:</h3>
             <p>
-              Flockr is a full-stack church management platform that helps churches handle attendance, small groups, communication, and ministry planning in one place.
+              Flockr is a full-stack church management platform that helps 
+              churches manage member data, handle attendance, organise 
+              people into groups and assign leaders to look after people.
+
+              I used the PERN stack (Postgresql, Express, React + Typescript, Node). 
             </p>
 
             <h3>Motivation:</h3>
             <p>
-              Our church faced challenges managing spreadsheets and scattered tools for attendance, group organisation, and communications. Flockr was built to centralise and streamline all these workflows.
+              Our church struggled to manage member data effectively using spreadsheets. 
+              Tasks such as assigning leaders to specific people, filtering 
+              information and organising members into categories and subgroups 
+              became difficult as the community grew. Flockr was built to replace 
+              this manual process with a scalable platform that makes it 
+              easier to manage people and support leaders in caring for their members.
             </p>
 
             <h3>What I Learned:</h3>
             <p>
-              This was my first time working with production deployment using Docker and AWS. I also improved my skills in building role-based authentication, designing REST APIs, and scaling database schemas for real-world scenarios.
+              This was my first time working with production deployment using 
+              Docker and AWS, which gave me valuable experience in containerisation
+              and cloud hosting. 
+              Compared to my earlier recipe app, Flockr was a much larger-scale 
+              PERN stack codebase, which taught me how to design and structure 
+              features for scalability and maintainability. 
+              I also learned to work with requirements specified by user 
+              expectations, adapting technical decisions to meet 
+              real-world needs and user expectations.
+            </p>
+            <h3>Tools used:</h3>
+            <p>
+              I developed this using the PERN stack 
+              (Postgresql, Express, React + Typescript, Node). 
+              To host, I containerised the backend with Docker and stored the 
+              image in AWS ECR. Using ECS, I deployed and managed the 
+              containers int eh cloud. For the database layer, I used RDS. 
+              I deployed with a VPC with security groups to control access 
+              to ensure that only ECS tasks within the same VPC could access 
+              the database to ensure secure communication. 
             </p>
 
             <h3>Demo:</h3>
